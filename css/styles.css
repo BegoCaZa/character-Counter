@@ -24,5 +24,180 @@ nav ul {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "DM Sans", sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  min-height: 100vh;
+
+}
+
+.header {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 245px;
+}
+
+.darkmodeButton {
+  width: 44px;
+}
+
+/* Body Container */
+.container {
+  width: 65%;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 1;
+}
+
+/* Text Input */
+
+.text-input {
+  width: 100%;
+  height: 200px;
+  padding-left:20px;
+  padding-top: 20px;
+  background-color: #21222C;
+  border: solid 1px #2A2B37;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  /* factores extras del input text */
+  outline: none;
+  resize: none;
+}
+
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Statistics Section */
+.data {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+
+.data-number {
+  font-size: 64px;
+  text-align: left;
+  color: black;
+  margin:0;
+
+}
+.data-text {
+  font-size: 20px;
+  text-align: left;
+  color: black;
+  margin:0;
+}
+
+/* Color Themes */
+.stat-characters {
+  background: #D3A0FA;
+  background-image: url("../assets/pattern-character-count.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.stat-words {
+  background: #FF9F00;
+  background-image: url("../assets/pattern-word-count.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  
+}
+
+.stat-sentences {
+  background: #e76f51;
+  background-image: url("../assets/pattern-sentence-count.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .title {
+      font-size: 24px;
+  }
+
+  .text-input {
+      height: 80px;
+  }
+
+  .data {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .options {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 }
