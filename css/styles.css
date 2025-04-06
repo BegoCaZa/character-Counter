@@ -80,6 +80,12 @@ body {
   resize: none;
 }
 
+.text-input:focus {
+  border: solid 1px #deb7ea;
+  background-color: #21222C;
+  color: white;
+}
+
 
 /* Options */
 .options {
@@ -95,6 +101,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+.checkbox-container input {
+ accent-color: #D3A0FA;
 }
 
 .subtitle {
@@ -181,13 +190,17 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .title {
       font-size: 24px;
   }
 
   .text-input {
       height: 80px;
+  }
+
+  .subtitle {
+      font-size: 15px;
   }
 
   .data {
@@ -200,4 +213,5 @@ body {
       flex-direction: column;
       align-items: flex-start;
   }
+
 }
