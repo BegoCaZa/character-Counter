@@ -97,13 +97,21 @@ body {
   margin-top: 10px;
 }
 
+.reading-time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
 .checkbox-container{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 .checkbox-container input {
- accent-color: #D3A0FA;
+ accent-color: var(--color-lilac);
 }
 
 .subtitle {
@@ -119,6 +127,7 @@ body {
   justify-content: space-between;
   margin-top: 20px;
   gap: 20px;
+  line-height: 1;
 }
 
 
@@ -134,59 +143,49 @@ body {
   text-align: left;
   color: black;
   margin:0;
+  line-height: 1;
 }
 
 /* Color Themes */
+
+.stat {
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+}
+:root {
+  --color-lilac: #D3A0FA;
+  --color-coral: #FF9F00;
+  --color-orange: #e76f51;
+}
 .stat-characters {
-  background: #D3A0FA;
+ 
+  background: var(--color-lilac);
   background-image: url("../assets/pattern-character-count.svg");
   background-repeat: no-repeat;
   background-position: right;
-  border-radius: 10px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
 }
 
 .stat-words {
-  background: #FF9F00;
+  background: var(--color-coral);
   background-image: url("../assets/pattern-word-count.svg");
   background-repeat: no-repeat;
-  background-position: right;
-  border-radius: 10px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  
+  background-position: right; 
 }
 
 .stat-sentences {
-  background: #e76f51;
+  background: var(--color-orange);
   background-image: url("../assets/pattern-sentence-count.svg");
   background-repeat: no-repeat;
   background-position: right;
-  border-radius: 10px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
 }
 
 /* Responsive Design */
@@ -213,5 +212,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
   }
+
+
 
 }

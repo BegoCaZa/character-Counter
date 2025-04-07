@@ -15,18 +15,9 @@ const totalCharactersElement = document.getElementById('total-characters');
 const wordCountElement = document.getElementById('word-count');
 const sentenceCountElement = document.getElementById('sentence-count');
 
-// VARIABLES
-// let text = textAreaElement.value; //contenido a analizar
 
 //FUNCIONES
 
-//  const deleteSpaces = text => {
-// const textWithoutSpaces='';
-//     if (excludeSpacesCheckbox.checked) {
-//     textWithoutSpaces = text.replaceAll(" ", ''); // Eliminar espacios
-//     }
-//  return textWithoutSpaces;
-//  }
 
 const analizeText = () => {
   //va a reiniciarlos cada que haya nuevo input
@@ -46,13 +37,14 @@ const analizeText = () => {
 
   //WORDS
 
-  if (textAreaElement.value === '') {
+  
     wordsArray = text.split(' '); //(pasar el texto a un array y contar los elementos)
     wordCountElement.textContent = wordsArray.length;
-  } else {
-    wordCountElement.textContent = 0;
-  }
-
+    if (textAreaElement.value === '') {
+      wordCountElement.textContent = 0; //si no hay nada en el textarea, el contador de palabras se pone a 0
+    }
+    
+ 
   //SENTENCES
 
   if (text.includes('.')) {
@@ -63,7 +55,22 @@ const analizeText = () => {
   } else {
     sentenceCountElement.textContent = 0;
   }
+
+  calculateReadingTime(wordsArray.length); //aqui llamo la cuenta de minutos con ese array
+//porque no lo necesito?  return wordsArray.length; //devuelve el número de palabras
+ 
 };
+
+const calculateReadingTime = (words) => { //regla de tres
+
+    let readingTime = Math.floor(words / 250); //redondear hacia abajo
+    readingTimeElement.textContent = readingTime;
+  
+    console.log(readingTime);
+  }
+
+
+
 
 // EVENTOS
 textAreaElement.addEventListener('input', analizeText);
